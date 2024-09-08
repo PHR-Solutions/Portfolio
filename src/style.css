@@ -567,6 +567,11 @@ button:focus {
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
 }
+.tech-icons p {
+  font-size: 14px !important; /* Smaller font size */
+  color: rgba(200, 137, 230, 0.637) !important;   /* Purple color */
+  margin-top: 10px !important; /* Adjust margin for spacing */
+}
 
 @media (max-width: 767px) {
   .tech-icons {

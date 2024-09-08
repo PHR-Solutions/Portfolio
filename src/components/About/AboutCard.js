@@ -7,13 +7,17 @@ function AboutCard() {
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
-          <p style={{ textAlign: "justify" }}>
-            Hi everyone, we are <span className="purple">PHR Solutions</span> from <span className="purple">Karnataka, India</span>.<br />
-            We are a creative team of developers, designers and SEO's..<br />
-            Additionally, we are a software developer group full of creative minds<br />
-            <br />
-            Services that we provide:
-          </p>
+        <p style={{ textAlign: "justify" }}>
+  Hello everyone! We are <span className="purple">PHR Solutions</span>, based in <span className="purple">Karnataka, India</span>.
+  <br />
+  Our team is made up of talented developers, designers, and SEO experts, dedicated to bringing creativity to everything we do.
+  <br />
+  As a dynamic software development group, we pride ourselves on our innovative thinking and technical expertise.
+  <br />
+  <br />
+  Here are the services we offer:
+</p>
+
           <ul>
             <li className="about-activity">
               <ImPointRight /> Website Development

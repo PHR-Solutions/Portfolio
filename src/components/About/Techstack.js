@@ -1,70 +1,70 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { CgCPlusPlus } from "react-icons/cg";
-import {
-  DiJavascript1,
-  DiReact,
-  DiNodejs,
-  DiMongodb,
-  DiPython,
-  DiGit,
-  DiJava,
-  DiDjango,
-  DiDotnet,
-} from "react-icons/di";
-import {
-  SiRedis,
-  SiFirebase,
-  SiNextdotjs,
-  SiSolidity,
-  SiPostgresql,
-  SiDjango,
-  SiAzuredevops,
-  SiCsharp,
-  SiUnrealengine,
-} from "react-icons/si";
-import { TbBrandGolang } from "react-icons/tb";
+import { DiReact, DiHtml5, DiCss3, DiJavascript1, DiNodejs, DiMongodb } from "react-icons/di";
+
+import { SiAngular, SiWordpress, SiFlutter, SiMysql, SiPostgresql, SiFirebase, SiAmazonaws, SiUnrealengine } from "react-icons/si";
+
 
 function Techstack() {
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiFirebase />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiDjango />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPostgresql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiAzuredevops />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiCsharp />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiUnrealengine />
-      </Col>
-    </Row>
+<Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+  <Col xs={4} md={2} className="tech-icons">
+    <DiReact />
+    <p>React</p>
+  </Col>
+  <Col xs={4} md={2} className="tech-icons">
+    <SiAngular />
+    <p>Angular</p>
+  </Col>
+  <Col xs={4} md={2} className="tech-icons">
+    <SiWordpress />
+    <p>WordPress</p>
+  </Col>
+  <Col xs={4} md={2} className="tech-icons">
+    <SiFlutter />
+    <p>Flutter</p>
+  </Col>
+  <Col xs={4} md={2} className="tech-icons">
+    <DiNodejs />
+    <p>Node.js</p>
+  </Col>
+  <Col xs={4} md={2} className="tech-icons">
+    <SiMysql />
+    <p>MySQL</p>
+  </Col>
+  <Col xs={4} md={2} className="tech-icons">
+    <SiPostgresql />
+    <p>PostgreSQL</p>
+  </Col>
+  <Col xs={4} md={2} className="tech-icons">
+    <DiHtml5 />
+    <p>HTML5</p>
+  </Col>
+  <Col xs={4} md={2} className="tech-icons">
+    <DiCss3 />
+    <p>CSS3</p>
+  </Col>
+  <Col xs={4} md={2} className="tech-icons">
+    <DiJavascript1 />
+    <p>JavaScript</p>
+  </Col>
+  <Col xs={4} md={2} className="tech-icons">
+    <DiMongodb />
+    <p>MongoDB</p>
+  </Col>
+  <Col xs={4} md={2} className="tech-icons">
+    <SiFirebase />
+    <p>Firebase</p>
+  </Col>
+  <Col xs={4} md={2} className="tech-icons">
+    <SiAmazonaws />
+    <p>AWS</p>
+  </Col>
+  <Col xs={4} md={2} className="tech-icons">
+    <SiUnrealengine />
+    <p>Unreal Engine</p>
+  </Col>
+</Row>
   );
 }
 
