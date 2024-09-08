@@ -3,13 +3,20 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import emailjs from "emailjs-com";
 import FloatingAlert from "./FloatingAlert";
 import { AiOutlineWhatsApp } from "react-icons/ai";
+import ReCAPTCHA from "react-google-recaptcha";
+const SITE_KEY = "google-site-verification=N9SuLo_4Ky3Q-TmvCHuRddM7ev-ddQovyy2UyMcTjwk"; 
 
 function ContactUs() {
   const [alert, setAlert] = useState({ message: "", type: "", show: false });
+  const [recaptchaValue, setRecaptchaValue] = useState(null);
 
   const sendEmail = (e) => {
     e.preventDefault();
-  
+
+    if (!recaptchaValue) {
+      setAlert({ message: "Please complete the reCAPTCHA", type: "error", show: true });
+      return;
+    }
     emailjs.sendForm('service_cvnl8ur', 'template_dyf4ify', e.target, 'xYyIUoO_aUAHolSI1')
       .then((result) => {
         console.log(result.text);
@@ -49,6 +56,10 @@ function ContactUs() {
                 <Form.Label>Message</Form.Label>
                 <Form.Control as="textarea" name="message" rows={4} placeholder="Your Message" required />
               </Form.Group>
+              <ReCAPTCHA
+                sitekey={SITE_KEY}
+                onChange={(value) => setRecaptchaValue(value)}
+              />
               <Button variant="primary" type="submit">
                 Send
               </Button>
