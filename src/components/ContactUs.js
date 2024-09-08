@@ -4,7 +4,7 @@ import emailjs from "emailjs-com";
 import ReCAPTCHA from "react-google-recaptcha";
 import FloatingAlert from "./FloatingAlert";
 import { AiOutlineWhatsApp } from "react-icons/ai";
-const SITE_KEY = "6LeQ7TkqAAAAAPXBkOEpc8hIPSTdMkVnoCeS70XA"; // Replace with your reCAPTCHA site key
+const SITE_KEY = "6LdpQjoqAAAAAJgHr-uzJIMeDYUkp0bOgjI6zkwB"; // Replace with your reCAPTCHA site key
 
 function ContactUs() {
   const [alert, setAlert] = useState({ message: "", type: "", show: false });
