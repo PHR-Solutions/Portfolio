@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import emailjs from "emailjs-com";
+import ReCAPTCHA from "react-google-recaptcha";
 import FloatingAlert from "./FloatingAlert";
 import { AiOutlineWhatsApp } from "react-icons/ai";
-import ReCAPTCHA from "react-google-recaptcha";
-const SITE_KEY = "6LeQ7TkqAAAAAPXBkOEpc8hIPSTdMkVnoCeS70XA"; 
+const SITE_KEY = "6LeQ7TkqAAAAAPXBkOEpc8hIPSTdMkVnoCeS70XA"; // Replace with your reCAPTCHA site key
 
 function ContactUs() {
   const [alert, setAlert] = useState({ message: "", type: "", show: false });
@@ -21,7 +21,8 @@ function ContactUs() {
       .then((result) => {
         console.log(result.text);
         setAlert({ message: "Message Sent Successfully!", type: "success", show: true });
-        e.target.reset(); // Reset form fields
+        e.target.reset(); 
+        setRecaptchaValue(null); 
         setTimeout(() => setAlert({ ...alert, show: false }), 3000);
       }, (error) => {
         console.log(error.text);
@@ -29,7 +30,6 @@ function ContactUs() {
         setTimeout(() => setAlert({ ...alert, show: false }), 3000);
       });
   };
-  
 
   return (
     <Container fluid className="contact-us-section">
@@ -66,24 +66,23 @@ function ContactUs() {
             </Form>
           </Col>
           <Col md={6} className="contact-details">
-          <h3>Our Contact</h3>
-<p>
-  <strong>Phone:</strong> 
-  <a href="tel:+919353853381">+91 9353853381</a> / 
-  <a href="tel:+918296553074">+91 8296553074</a><br />
-  <strong>Email:</strong> 
-  <a href="mailto:phrsolutions.business@example.com">phrsolutions.business@example.com</a>
-</p>
-<Button
-  variant="success"
-  href="https://wa.me/+919353853381"
-  target="_blank"
-  className="whatsapp-button"
->
-  <AiOutlineWhatsApp style={{ fontSize: "1.5em", color: "white" }} />
-  <span style={{ marginLeft: "8px", color: "white" }}>Chat with us</span>
-</Button>
-
+            <h3>Our Contact</h3>
+            <p>
+              <strong>Phone:</strong> 
+              <a href="tel:+919353853381">+91 9353853381</a> / 
+              <a href="tel:+918296553074">+91 8296553074</a><br />
+              <strong>Email:</strong> 
+              <a href="mailto:phrsolutions.business@example.com">phrsolutions.business@example.com</a>
+            </p>
+            <Button
+              variant="success"
+              href="https://wa.me/+919353853381"
+              target="_blank"
+              className="whatsapp-button"
+            >
+              <AiOutlineWhatsApp style={{ fontSize: "1.5em", color: "white" }} />
+              <span style={{ marginLeft: "8px", color: "white" }}>Chat with us</span>
+            </Button>
           </Col>
         </Row>
       </Container>
