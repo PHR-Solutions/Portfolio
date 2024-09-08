@@ -61,7 +61,7 @@ function ContactUs() {
   <a href="tel:+919353853381">+91 9353853381</a> / 
   <a href="tel:+918296553074">+91 8296553074</a><br />
   <strong>Email:</strong> 
-  <a href="mailto:phrasolutions.business@example.com">phrasolutions.business@example.com</a>
+  <a href="mailto:phrsolutions.business@example.com">phrsolutions.business@example.com</a>
 </p>
 <Button
   variant="success"
