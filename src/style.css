@@ -835,7 +835,7 @@ button:focus {
 /* --------- */
 
 .contact-us-section {
-  height: 93vh !important;
+  /* height: 93vh !important; */
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 50px !important;
