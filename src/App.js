@@ -5,8 +5,8 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
-import Resume from "./components/Resume/ResumeNew";
 import Services from "./components/Services/Services";
+import ComingSoon from "./components/ComingSoon";
 import {
   BrowserRouter as Router,
   Route,
@@ -17,6 +17,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ContactUs from "./components/ContactUs";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -40,6 +41,8 @@ function App() {
           <Route path="/project" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/coming-soon" element={<ComingSoon />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />

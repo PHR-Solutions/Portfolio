@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.png";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-import { CgGitFork } from "react-icons/cg";
+import { CgPhone } from "react-icons/cg";
 import { ImBlog } from "react-icons/im";
 import { DiGit } from "react-icons/di";
 import {
@@ -14,9 +14,8 @@ import {
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from "react-icons/ai";
-
+import { FaEnvelope } from "react-icons/fa"; // Email icon
 import { CgFileDocument } from "react-icons/cg";
-import GitHubCalendar from "react-github-calendar";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -96,9 +95,9 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                href="#"
-                target="_blank"
-                rel="noreferrer"
+               as={Link}
+               to="/coming-soon"
+               onClick={() => updateExpanded(false)}
               >
                 <ImBlog style={{ marginBottom: "2px" }} /> Blogs
               </Nav.Link>
@@ -106,12 +105,13 @@ function NavBar() {
 
             <Nav.Item className="fork-btn">
               <Button
-                href="#"
-                target="_blank"
+                as={Link}
+                to="/contact-us"
+                onClick={() => updateExpanded(false)}
                 className="fork-btn-inner"
               >
-                <DiGit style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} />
+                <FaEnvelope style={{ fontSize: "1.2em" }} />{" "}
+                <CgPhone style={{ fontSize: "1.1em" }} />
               </Button>
             </Nav.Item>
           </Nav>
